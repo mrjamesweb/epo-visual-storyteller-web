@@ -1,5 +1,5 @@
 
-import { Youtube, Instagram, Linkedin } from "lucide-react";
+import { Youtube, Instagram, Linkedin, Music } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,6 +14,11 @@ const Footer = () => {
       name: "Instagram", 
       url: "https://www.instagram.com/epocomedian?igsh=MXNtM3psa3U3dzVubQ%3D%3D&utm_source=qr",
       icon: Instagram,
+    },
+    {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@epocomedian?_t=ZM-8xEJoXGur9M&_r=1",
+      icon: Music,
     },
     {
       name: "LinkedIn",
