@@ -151,6 +151,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
+                        className="break-all"
                       />
                     </div>
                   </div>
@@ -220,11 +221,11 @@ const Contact = () => {
                       <div className="flex-1">
                         <h3 className="font-semibold text-primary mb-2">{info.title}</h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-gray-700">
+                          <p key={idx} className={`text-gray-700 ${info.title === "Email Address" ? "break-all" : ""}`}>
                             {info.action ? (
                               <a 
                                 href={info.action} 
-                                className="hover:text-primary transition-colors duration-200"
+                                className="hover:text-primary transition-colors duration-200 break-all"
                               >
                                 {detail}
                               </a>
@@ -272,3 +273,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

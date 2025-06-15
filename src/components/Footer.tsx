@@ -1,5 +1,5 @@
 
-import { Youtube, Instagram, Linkedin, Music } from "lucide-react";
+import { Youtube, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +18,7 @@ const Footer = () => {
     {
       name: "TikTok",
       url: "https://www.tiktok.com/@epocomedian?_t=ZM-8xEJoXGur9M&_r=1",
-      icon: Music,
+      icon: null, // Will use <img> instead of an icon component
     },
     {
       name: "LinkedIn",
@@ -54,7 +54,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-gold">Contact Info</h3>
             <div className="space-y-2 text-sm">
               <p>Phone: +234 803 213 1403</p>
-              <p>Email: erukakpomrepromise99@gmail.com</p>
+              <p>Email: <span className="break-all">erukakpomrepromise99@gmail.com</span></p>
               <p>Ochima Close, Even Estate, Badore, Ajah, Lagos-Nigeria</p>
             </div>
           </div>
@@ -63,18 +63,35 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gold">Follow Me</h3>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-secondary hover:bg-gold hover:text-primary p-2 rounded-full transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
+              {socialLinks.map((social) =>
+                social.name === "TikTok" ? (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secondary hover:bg-gold hover:text-primary p-2 rounded-full transition-colors duration-200 flex items-center justify-center"
+                    aria-label={social.name}
+                  >
+                    <img
+                      src="/lovable-uploads/cb0d3b54-ef89-45f1-ab3e-73e07273ce6e.png"
+                      alt="TikTok"
+                      className="w-5 h-5"
+                    />
+                  </a>
+                ) : (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secondary hover:bg-gold hover:text-primary p-2 rounded-full transition-colors duration-200"
+                    aria-label={social.name}
+                  >
+                    {social.icon && <social.icon size={20} />}
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -88,3 +105,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
