@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
       size="lg"
     >
       <MessageCircle size={24} />
-      <span className="ml-2 hidden sm:inline">WhatsApp</span>
+      <span className="ml-2">WhatsApp</span>
     </Button>
   );
 };
