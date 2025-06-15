@@ -50,8 +50,8 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white animate-slide-in-left text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6 transform transition-all duration-500 hover:scale-105">
-                About 
-                <span className="text-gold animate-pulse">EPOCOMEDIAN</span>
+                <span className="mr-1">About</span>
+                <span className="ml-1 text-gold animate-pulse">EPOCOMEDIAN</span>
               </h1>
               <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-accent animate-fade-in delay-200">
                 Erukakpomre Promise Obruche
@@ -201,3 +201,4 @@ const About = () => {
 };
 
 export default About;
+
