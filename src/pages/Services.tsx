@@ -1,4 +1,3 @@
-
 import { Film, Camera, Palette, Users, Award, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -52,7 +51,14 @@ const Services = () => {
     }
   ];
 
+  // Updated filmography - insert requested item FIRST
   const filmography = [
+    {
+      year: "2025",
+      project: "Beneath Command (Best Production Design and Short film)",
+      role: "Production Designer",
+      company: "Ebonylife Creative Academy"
+    },
     {
       year: "2025",
       project: "Creative Hangout Event",
