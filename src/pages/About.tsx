@@ -40,27 +40,27 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary py-16">
+      <section className="bg-gradient-to-br from-primary to-secondary py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white animate-fade-in">
-              <h1 className="text-4xl sm:text-5xl font-playfair font-bold mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-white animate-fade-in text-center lg:text-left order-2 lg:order-1">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6">
                 About 
                 <span className="text-gold">EPOCOMEDIAN</span>
               </h1>
-              <h2 className="text-2xl font-semibold mb-4 text-accent">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-accent">
                 Erukakpomre Promise Obruche
               </h2>
-              <p className="text-lg mb-6">
+              <p className="text-base sm:text-lg mb-4 sm:mb-6">
                 A nimble, industrious and charismatic individual, possessing excellent creative skills. 
                 Very confident, disciplined and proactive having the ability to work under little or no supervision.
               </p>
-              <p className="text-lg">
+              <p className="text-base sm:text-lg">
                 A good team player willing to grow alongside the organization through immense contribution 
                 to development while increasing work experience and growing abilities.
               </p>
             </div>
-            <div className="animate-scale-in">
+            <div className="animate-scale-in order-1 lg:order-2">
               <img 
                 src="/lovable-uploads/3c2ec757-f857-43e2-bee5-04132d85784a.png" 
                 alt="Erukakpomre Promise Obruche" 
@@ -72,37 +72,37 @@ const About = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-8 sm:py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="animate-fade-in">
             <CardHeader>
-              <CardTitle className="text-2xl font-playfair text-primary">Contact Information</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl font-playfair text-primary text-center sm:text-left">Contact Information</CardTitle>
             </CardHeader>
-            <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div className="text-center sm:text-left">
                 <h3 className="font-semibold text-primary mb-2">Lagos Address</h3>
-                <p className="text-gray-700">
+                <p className="text-sm sm:text-base text-gray-700">
                   Ochima Close, Even Estate,<br />
                   Badore, Ajah, Lagos-Nigeria
                 </p>
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="font-semibold text-primary mb-2">Delta Address</h3>
-                <p className="text-gray-700">
+                <p className="text-sm sm:text-base text-gray-700">
                   No. 1, street 1, off. KES College Street,<br />
                   Iwhrekpokpor, Ughelli, Delta State
                 </p>
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="font-semibold text-primary mb-2">Phone Numbers</h3>
-                <p className="text-gray-700">
+                <p className="text-sm sm:text-base text-gray-700">
                   +234 803 213 1403<br />
                   +234 902 514 5484
                 </p>
               </div>
-              <div>
+              <div className="text-center sm:text-left">
                 <h3 className="font-semibold text-primary mb-2">Email</h3>
-                <p className="text-gray-700">erukakpomrepromise99@gmail.com</p>
+                <p className="text-sm sm:text-base text-gray-700 break-words">erukakpomrepromise99@gmail.com</p>
               </div>
             </CardContent>
           </Card>
@@ -110,26 +110,26 @@ const About = () => {
       </section>
 
       {/* Education Section */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-primary mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-primary mb-4">
               Educational Background
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {education.map((edu, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 animate-fade-in">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-accent p-3 rounded-full">
-                      <GraduationCap className="text-primary" size={24} />
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="bg-accent p-2 sm:p-3 rounded-full flex-shrink-0">
+                      <GraduationCap className="text-primary" size={20} />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-primary mb-2">{edu.degree}</h3>
-                      <p className="text-gray-700 mb-1">{edu.institution}</p>
-                      <p className="text-sm text-gray-600">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-semibold text-primary mb-2 text-sm sm:text-base">{edu.degree}</h3>
+                      <p className="text-gray-700 mb-1 text-sm sm:text-base">{edu.institution}</p>
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {edu.year || edu.status}
                         {edu.grade && ` - ${edu.grade}`}
                       </p>
@@ -141,19 +141,19 @@ const About = () => {
           </div>
 
           {/* Certifications */}
-          <Card className="mb-12 animate-fade-in">
+          <Card className="mb-8 sm:mb-12 animate-fade-in">
             <CardHeader>
-              <CardTitle className="flex items-center text-primary">
-                <Award className="mr-3" size={24} />
+              <CardTitle className="flex items-center text-primary text-center sm:text-left">
+                <Award className="mr-2 sm:mr-3 flex-shrink-0" size={20} />
                 Professional Certifications
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {certifications.map((cert, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">{cert}</span>
+                    <span className="text-sm sm:text-base text-gray-700">{cert}</span>
                   </li>
                 ))}
               </ul>
@@ -163,17 +163,17 @@ const About = () => {
           {/* Professional Affiliations */}
           <Card className="animate-fade-in">
             <CardHeader>
-              <CardTitle className="flex items-center text-primary">
-                <Users className="mr-3" size={24} />
+              <CardTitle className="flex items-center text-primary text-center sm:text-left">
+                <Users className="mr-2 sm:mr-3 flex-shrink-0" size={20} />
                 Professional Affiliations
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {affiliations.map((affiliation, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">{affiliation}</span>
+                    <span className="text-sm sm:text-base text-gray-700">{affiliation}</span>
                   </li>
                 ))}
               </ul>
